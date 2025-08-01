@@ -18,7 +18,8 @@ const app = express();
 // MIDDLEWARES
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin:
+      process.env.FRONTEND_URL || "https://jewellery-frontend-uds.netlify.app",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
